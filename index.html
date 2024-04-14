@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Old English Text MT', serif;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 2px solid #ff6b6b;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        /* Secciones */
+        .seccion {
+            display: none;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 800px;
+            color: #333;
+        }
+        .seccion.activa {
+            display: block;
+        }
+        h1, h2 {
+            color: #ff6b6b;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#" onclick="mostrarSeccion('inicio')"><span class="icono">🏛️</span>Inicio</a>
+    <a href="#" onclick="mostrarSeccion('galeria')"><span class="icono">🎨</span>Galería</a>
+    <a href="#" onclick="mostrarSeccion('contacto')"><span class="icono">📞</span>Contacto</a>
+</nav>
+<div class="seccion activa" id="inicio">
+    <h1>Bienvenidos a nuestra Galería de Arte</h1>
+    <p>Y recuerda, no necesitas ser un experto para ser un gran artista</p>
+</div>
+<div class="seccion" id="galeria">
+    <h2>Galería de Fotos</h2>
+    <!-- Aquí puedes agregar tus fotos de arte -->
+    <img src="arte7.jpg" height="500" width="956"/><img src="arte5.jpg" height="405" width="720"/><img src="arte4.jpg" height="344" width="586"/><img src="arte3.jpg" height="336" width="600"/><img src="arte2.jpg" height="360" width="640"/><img src="art1.jpg" height="336" width="600"/>
+</div>
+    <div class="seccion" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes alguna pregunta? Escríbenos a <a href="mailto:galeriadearte@ciisa.cl" style="color: #ff6b6b;">galeriadearte@ciisa.cl</a> o nos puedes llamar a <a href="+56912345678" style="color: #ff6b6b;">+56912345678</a></p>
+</div>
+<script>
+    function mostrarSeccion(seccion) {
+        const secciones = document.querySelectorAll('.seccion');
+        secciones.forEach(s => s.classList.remove('activa'));
+        document.getElementById(seccion).classList.add('activa');
+    }
+</script>
+</body>
+</html>
